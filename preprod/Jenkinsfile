@@ -13,7 +13,7 @@ try {
 
 
 stage('GitCheckOut') {
-git branch: 'preprod', credentialsId: '01', url: 'https://github.com/amitvashisttech/devops301-mindtree-09-Jan-2021.git'
+git branch: 'preprod', credentialsId: '01', url: 'https://github.com/jyothi-hs/devops301-mindtree-09-Jan-2022.git'
 }
 
 
@@ -67,7 +67,7 @@ sh 'docker-compose up -d --build'
 
 def notify(status){
     emailext(
-    to: "amitvashist7@outlook.com",
+    to: "jyothikahsgowda@gmail.com",
     subject: "${status} :JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
     body:"""<p>${status}: :JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
             <p>Check Console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
