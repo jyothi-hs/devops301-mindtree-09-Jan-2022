@@ -5,7 +5,7 @@ notify('Started')
 try {
 
 // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
-    def server = Artifactory.server "04"
+    def server = Artifactory.server "01"
     def buildInfo = Artifactory.newBuildInfo() 
 
 // Project Dir
